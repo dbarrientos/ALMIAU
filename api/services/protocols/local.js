@@ -25,7 +25,7 @@ var crypto    = require('crypto');
  */
 exports.register = function (req, res, next) {
   var email    = req.param('email')
-    , username = req.param('username')
+    //, username = req.param('username')
     , password = req.param('password');
 
   if (!email) {
@@ -33,10 +33,10 @@ exports.register = function (req, res, next) {
     return next(new Error('No email was entered.'));
   }
 
-  if (!username) {
+  /*if (!username) {
     req.flash('error', 'Error.Passport.Username.Missing');
     return next(new Error('No username was entered.'));
-  }
+  }*/
 
   if (!password) {
     req.flash('error', 'Error.Passport.Password.Missing');
@@ -44,8 +44,8 @@ exports.register = function (req, res, next) {
   }
 
   User.create({
-    username : username
-  , email    : email
+    //username : username
+    email    : email
   }, function (err, user) {
     if (err) {
       if (err.code === 'E_VALIDATION') {
@@ -141,7 +141,7 @@ exports.login = function (req, identifier, password, next) {
     query.email = identifier;
   }
   else {
-    query.username = identifier;
+    query.email = identifier;
   }
 
   User.findOne(query, function (err, user) {
@@ -152,9 +152,9 @@ exports.login = function (req, identifier, password, next) {
     if (!user) {
       if (isEmail) {
         req.flash('error', 'Error.Passport.Email.NotFound');
-      } else {
+      } /*else {
         req.flash('error', 'Error.Passport.Username.NotFound');
-      }
+      }*/
 
       return next(null, false);
     }
