@@ -27,31 +27,14 @@
             + Import stylesheets from other directories
             + Use a different or additional preprocessor, like SASS, SCSS or Stylus
     -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css" rel="stylesheet" integrity="sha384-2mX2PSpkRSXLQzmNzH3gwK6srb06+OfbDlYjbog8LQuALYJjuQ3+Yzy2JIWNV9rW" crossorigin="anonymous">
 
     <!--STYLES-->
     <link rel="stylesheet" href="/styles/importer.css">
     <!--STYLES END-->
   </head>
-
-  <body ng-app="routerApp">
-
-    <!-- NAVIGATION -->
-    <nav class="navbar navbar-inverse" role="navigation">
-       <div class="navbar-header">
-           <a class="navbar-brand" ui-sref="#">Rifas</a>
-       </div>
-       <ul class="nav navbar-nav">
-           <li><a ui-sref="home">Home</a></li>
-       </ul>
-    </nav>
-
-    <!-- MAIN CONTENT -->
-    <div class="container">
-
-       <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
-       <div ui-view></div>
-
-    </div>
+  <%- body %> 
+  
 
 
 
@@ -104,6 +87,10 @@
           + Use a different preprocessor, like TypeScript
 
     -->
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.3/holder.js"></script>
 
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
