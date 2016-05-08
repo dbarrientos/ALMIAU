@@ -47,11 +47,11 @@ module.exports.routes = {
   'GET /angular/:ang': 'AngularController.default',
   /* RIFAS */
   'GET /raffle/new': 'RaffleController.new',
-  'POST /raffle/new': 'RaffleController.new',
+  'POST /raffle/new': 'RaffleController.newto',
   'GET /raffle/confirm': 'RaffleController.confirm',
   'GET /raffle/pay': 'RaffleController.pay',
   'GET /raffle': 'RaffleController.defaut',
-  'POST /raffle/pay': 'RaffleController.pay',
+  'POST /raffle/pay': 'RaffleController.payto',
 
   /* BANK */
   'GET /bank/get': 'BankController.default',

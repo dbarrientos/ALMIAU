@@ -44,6 +44,16 @@ module.exports = {
   new: function (req, res) {
     return res.view('index');
 
+  },
+  payto: function (req, res) {    
+    return res.json({
+      status:1
+    });
+  },
+  newto: function (req, res) {
+    return res.json({
+      status:1
+    });
   }
 };
 
