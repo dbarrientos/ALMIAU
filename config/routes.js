@@ -51,7 +51,7 @@ module.exports.routes = {
   '/raffle/confirm': 'RaffleController.confirm',
   '/raffle/pay': 'RaffleController.pay',
   '/raffle': 'RaffleController.index',
-  '/raffle/pay': 'RaffleController.payto',
+  '/raffle/payto': 'RaffleController.payto',
 
   /* BANK */
 
