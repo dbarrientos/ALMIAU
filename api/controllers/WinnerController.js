@@ -13,9 +13,11 @@ module.exports = {
    * `WinnerController.default()`
    */
   index: function (req, res) {
-    return res.json({
-      status:1
-    });
+    Winner.find({
+      raffle_x_raffle: req.param('id')
+    },function(error,result){
+      return res.json(result);
+    })
   }
 
 };
