@@ -49,7 +49,7 @@ module.exports.routes = {
   '/raffle/new/:category': 'RaffleController.new',
   '/lol': 'RaffleController.newto',
   '/raffle/confirm/:id': 'RaffleController.confirm',
-  '/raffle/pay': 'RaffleController.pay',
+  '/raffle/pay/:id': 'RaffleController.pay',
   '/raffle': 'RaffleController.index',
   '/raffle/payto': 'RaffleController.payto',
 

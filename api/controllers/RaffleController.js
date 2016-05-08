@@ -21,8 +21,13 @@ module.exports = {
   },
 
   pay: function (req, res) {
-    return res.view('index');
-
+    Raffle.findOne({
+      id: req.param("id")
+    },function(err,data){
+      return res.view('parts/pay',{
+        rifa: data
+      });
+    })
   },
   new: function (req, res) {
     Category.findOne({

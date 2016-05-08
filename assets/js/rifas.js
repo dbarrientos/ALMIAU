@@ -1,6 +1,11 @@
 (function($){ 
   $(document).ready(function(){
       $(".datepicker").datepicker();
+      $( "#selectable" ).selectable({
+        selected: function( event, ui ) {
+          $(".ui-selected").length
+        }
+      });
   });
   $.PREMIOS = [];
   var premio = function(imagen,valor){
@@ -94,7 +99,6 @@
       $("#LOGIN").modal();
     }
   });
-
 
 
 })(jQuery);
