@@ -13,7 +13,9 @@ module.exports = {
 
     photo : { type: 'string' },
 
-    order : { type: 'string' }
+    order : { type: 'string' },
+
+    raffle_x_raffle : { model: 'raffle' },
   }
 };
 
