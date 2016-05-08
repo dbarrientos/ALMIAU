@@ -21,7 +21,7 @@ module.exports = {
    * `BankController.create()`
    */
   create: function (req, res) {
-    return res.view('index');
+    console.log('perrto');
   },
 
 

@@ -49,8 +49,8 @@ module.exports.routes = {
   'GET /raffle/confirm': 'RaffleController.confirm',
   'GET /raffle/pay': 'RaffleController.pay',
   /* BANK */
-  'GET /bank/get': 'RaffleController.default',
-  'GET /bank/create': 'RaffleController.confirm'
+  'GET /bank/get': 'BankController.default',
+  'GET /bank/create': 'BankController.create'
 
 
   /***************************************************************************

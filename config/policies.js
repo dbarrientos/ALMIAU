@@ -53,7 +53,6 @@ module.exports.policies = {
     '*': ['passport']
   },
   'raffle': [ 'passport', 'serviceAuth'],
-  'bank': [ 'passport', 'serviceAuth'],
   'category': [ 'passport', 'serviceAuth'],
   'checkaccount': [ 'passport', 'serviceAuth'],
   'bank': {
