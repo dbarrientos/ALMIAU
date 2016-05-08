@@ -28,7 +28,9 @@ module.exports = function (req, res, next) {
     passport.session()(req, res, function () {
       // Make the user available throughout the frontend
       res.locals.user = req.user;
-
+      if(req.param('url') != "" && req.param('url') != null){
+	    res.locals.url = req.param('url')	
+      }
       next();
     });
   });

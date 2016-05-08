@@ -63,8 +63,25 @@
   </div>
 
 
-
+  <
 <br><br>
 </div>
 
+<script>
+  var inte = setInterval(function(){
+    if(typeof jQuery != "undefined"){
+      (function($){
+        if($("#login").attr("status") == 0){
+          $("#LOGIN").modal({
+            backdrop: false
+          }).css({
+            background: "rgba(0,0,0,0.5)"
+          });
 
+          clearInterval(inte);
+        }
+      })(jQuery)
+      
+    }
+  }, 250);
+</script>

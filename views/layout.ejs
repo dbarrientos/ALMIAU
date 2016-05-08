@@ -57,10 +57,11 @@
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">@</span>
             <input type="text" class="form-control" placeholder="E-Mail" name="identifier">
+            <input type="hidden" class="form-control" name="url" value="<%- req.url %>">
           </div>
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">@</span>
-            <input type="text" class="form-control" placeholder="Password" name="password">
+            <input type="password" class="form-control" placeholder="Password" name="password">
           </div>
          
         </div>
@@ -95,7 +96,7 @@
           </div>
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">@</span>
-            <input type="text" class="form-control" placeholder="Password" name="password">
+            <input type="password" class="form-control" placeholder="Password" name="password">
           </div>
         </div>
         <div class="modal-footer">
