@@ -10,25 +10,26 @@
 module.exports = function(req, res, next) {
   // User is allowed, proceed to the next policy,
   // or if this is the last policy, the controller
- //  	if(typeof res.locals.user != "undefined"){
- //  		if(res.locals.user.admin == 1){
- //  			next();
- //  		}
- //  		else
- //  		{
- //  			return res.json({
-	//   			status: "3",
-	//   			error: "forbidden"
-	//   		});
- //  		}
- //  	}
- //  	else
- //  	{
- //  		return res.json({
- //  			status: "3",
- //  			error: "forbidden"
- //  		});
-	// }
-  //
-  next();
+
+  	/*if(typeof res.locals.user != "undefined"){
+  		if(res.locals.user.admin == 1){
+  			next();
+  		}
+  		else
+  		{
+  			return res.json({
+	  			status: "3",
+	  			error: "forbidden"
+	  		});
+  		}
+  	}
+  	else
+  	{
+  		return res.json({
+  			status: "3",
+  			error: "forbidden"
+  		});
+	}*/
+	next();
+
 };

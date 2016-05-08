@@ -9,19 +9,19 @@ module.exports = {
 
   attributes: {
 
-    category_x_category : { type: 'string' },
+    category_x_category : { model: 'category' },
 
-    prize_x_prize : { type: 'string' },
+    prize_x_prize : { model: 'prize' },
 
     value : { type: 'string' },
 
-    date_finish : { type: 'string' },
+    date_finish : { type: 'datetime' },
 
     min_user : { type: 'string' },
 
     max_user : { type: 'string' },
 
-    CheckAccount_x_CheckAccount : { type: 'string' }
+    CheckAccount_x_CheckAccount : { model: 'checkAccount' }
   }
 };
 

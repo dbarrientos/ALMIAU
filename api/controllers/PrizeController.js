@@ -12,8 +12,10 @@ module.exports = {
   /**
    * `PrizeController.default()`
    */
-  default: function (req, res) {
-    return res.view('index');
+  index: function (req, res) {
+    return res.json({
+      status:1
+    });
   },
 
 

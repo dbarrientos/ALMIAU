@@ -16,22 +16,6 @@ module.exports = {
     return res.view('index');
   },
 
-
-  /**
-   * `RaffleController.create()`
-   */
-  create: function (req, res) {
-
-      return res.view('index');
-  },
-
-  /**
-   * `RaffleController.destroy()`
-   */
-  destroy: function (req, res) {
-    return res.view('index');
-  },
-
   confirm: function (req, res) {
     return res.view('index');
 
@@ -44,6 +28,19 @@ module.exports = {
   new: function (req, res) {
     return res.view('index');
 
+  },
+  payto: function (req, res) {    
+    return res.json({
+      status:1
+    });
+  },
+  newto: function (req, res) {
+    return res.json({
+      status:1
+    });
+  },
+  index: function(req,res){
+    
   }
 };
 

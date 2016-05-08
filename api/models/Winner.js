@@ -8,13 +8,13 @@
 module.exports = {
 
   attributes: {
-    ticket_x_ticket : { type: 'integer' },
+    ticket_x_ticket : { model: 'ticket' },
 
-    user_x_user : { type: 'integer' },
+    user_x_user : { model:'user' },
 
-    raffle_x_raffle : { type: 'integer' },
+    raffle_x_raffle : { model: 'raffle' },
 
-    prize_x_prize : { type: 'integer' }
+    prize_x_prize : { model: 'prize' }
   }
 };
 

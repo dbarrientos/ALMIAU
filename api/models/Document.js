@@ -11,7 +11,7 @@ module.exports = {
 
     file : { type: 'string' },
 
-    prize_x_prize : { type: 'string' }
+    prize_x_prize : { model: 'prize' }
   }
 };
 

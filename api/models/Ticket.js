@@ -9,7 +9,7 @@ module.exports = {
 
   attributes: {
 
-    role_x_role : { type: 'integer' },
+    role_x_role : { model: 'role'},
 
     number : { type: 'integer' },
 
