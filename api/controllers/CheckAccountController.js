@@ -30,14 +30,6 @@ module.exports = {
    */
   update: function (req, res) {
     return res.view('index');
-  },
-
-
-  /**
-   * `CheckAccountController.destroy()`
-   */
-  destroy: function (req, res) {
-    return res.view('index');
   }
 };
 

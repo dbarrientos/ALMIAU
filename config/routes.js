@@ -33,6 +33,7 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'angular/index'},
+  /* AUTH */
   'GET /login': 'AuthController.login',
   'POST /logout': 'AuthController.logout',
   'GET /register': 'AuthController.register',
@@ -45,14 +46,27 @@ module.exports.routes = {
   'GET /auth/:provider/:action': 'AuthController.callback',
   'GET /angular/:ang': 'AngularController.default',
   /* RIFAS */
-  'GET /raffle/new': 'RaffleController.default',
+  'GET /raffle/new': 'RaffleController.new',
+  'POST /raffle/new': 'RaffleController.new',
   'GET /raffle/confirm': 'RaffleController.confirm',
   'GET /raffle/pay': 'RaffleController.pay',
+  'GET /raffle': 'RaffleController.defaut',
+  'POST /raffle/pay': 'RaffleController.pay',
+
   /* BANK */
   'GET /bank/get': 'BankController.default',
-  'GET /bank/create': 'BankController.create'
-
-
+  'POST /bank/create': 'BankController.create'
+  'DELETE /bank/create': 'BankController.destroy'
+  /* CATEGORY */
+  'GET /category/get': 'CategoryController.default',
+  /* PRIZE */
+  'GET /prize/get': 'CategoryController.default',
+  'POST /prize/create': 'CategoryController.create',
+  'DELETE /prize/destroy': 'CategoryController.destroy',
+  /* CHECK ACCOUNT */
+  'GET /checkaccount': 'CheckAccountController.default',
+  'POST /checkaccount/create': 'CheckAccountController.create',
+  'DELETE /checkaccount/destroy': 'CheckAccountController.destroy',
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

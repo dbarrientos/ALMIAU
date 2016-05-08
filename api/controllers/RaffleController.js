@@ -25,15 +25,6 @@ module.exports = {
       return res.view('index');
   },
 
-
-  /**
-   * `RaffleController.update()`
-   */
-  update: function (req, res) {
-    return res.view('index');
-  },
-
-
   /**
    * `RaffleController.destroy()`
    */
@@ -47,6 +38,10 @@ module.exports = {
   },
 
   pay: function (req, res) {
+    return res.view('index');
+
+  },
+  new: function (req, res) {
     return res.view('index');
 
   }

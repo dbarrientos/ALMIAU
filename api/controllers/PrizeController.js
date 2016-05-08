@@ -18,25 +18,9 @@ module.exports = {
 
 
   /**
-   * `PrizeController.create()`
-   */
-  create: function (req, res) {
-    return res.view('index');
-  },
-
-
-  /**
    * `PrizeController.update()`
    */
   update: function (req, res) {
-    return res.view('index');
-  },
-
-
-  /**
-   * `PrizeController.destroy()`
-   */
-  destroy: function (req, res) {
     return res.view('index');
   }
 };

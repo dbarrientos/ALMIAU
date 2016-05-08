@@ -18,26 +18,10 @@ module.exports = {
 
 
   /**
-   * `CategoryController.create()`
-   */
-  create: function (req, res) {
-    return res.view('index');
-  },
-
-
-  /**
    * `CategoryController.update()`
    */
   update: function (req, res) {
     return res.view('index');
   },
-
-
-  /**
-   * `CategoryController.destroy()`
-   */
-  destroy: function (req, res) {
-    return res.view('index');
-  }
 };
 
