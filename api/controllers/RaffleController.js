@@ -15,13 +15,21 @@ module.exports = {
 
 
   confirm: function (req, res) {
-    return res.view('index');
+    return res.view('parts/rifa');
 
   },
 
   pay: function (req, res) {
-    return res.view('index');
-
+    Raffle.findOne({
+      id: req.param('raffle')
+    },function(err,result){
+      console.log(result)
+      return res.view('parts/pay',{
+        value: result.value,
+        min_user: result.min_user,
+        max_user: result.max_user
+      });
+    });
   },
   new: function (req, res) {
     Category.findOne({

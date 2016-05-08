@@ -32,7 +32,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': { view: 'parts/home'},
+  '/': { view: 'angular/index'},
   /* AUTH */
   'GET /login': 'AuthController.login',
   'POST /logout': 'AuthController.logout',
@@ -49,7 +49,7 @@ module.exports.routes = {
   '/raffle/new/:category': 'RaffleController.new',
   '/raffle/new': 'RaffleController.newto',
   '/raffle/confirm': 'RaffleController.confirm',
-  '/raffle/pay': 'RaffleController.pay',
+  '/raffle/pay/:raffle': 'RaffleController.pay',
   '/raffle': 'RaffleController.index',
   '/raffle/payto': 'RaffleController.payto',
 
