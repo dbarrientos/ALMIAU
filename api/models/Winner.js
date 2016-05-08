@@ -8,6 +8,7 @@
 module.exports = {
 
   attributes: {
+  	
     ticket_x_ticket : { model: 'ticket' },
 
     user_x_user : { model:'user' },

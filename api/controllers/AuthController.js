@@ -30,6 +30,11 @@ var AuthController = {
    * @param {Object} req
    * @param {Object} res
    */
+   home: function(req,res){
+      return res.view('parts/home',{
+        user: res.locals.user
+      });
+   },
   login: function (req, res) {
     var strategies = sails.config.passport
       , providers  = {};
@@ -170,9 +175,7 @@ var AuthController = {
         
         // Upon successful login, send the user to the homepage were req.user
         // will be available.
-        res.json({
-          status:1
-        })
+        res.redirect('/');
       });
     });
   },

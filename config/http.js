@@ -30,23 +30,24 @@ module.exports.http = {
   *                                                                          *
   ***************************************************************************/
 
-    // order: [
-    //   'startRequestTimer',
-    //   'cookieParser',
-    //   'session',
-    //   'myRequestLogger',
-    //   'bodyParser',
-    //   'handleBodyParserError',
-    //   'compress',
-    //   'methodOverride',
-    //   'poweredBy',
-    //   '$custom',
-    //   'router',
-    //   'www',
-    //   'favicon',
-    //   '404',
-    //   '500'
-    // ],
+   /* order: [
+      'startRequestTimer',
+      'cookieParser',
+      'session',
+      'myRequestLogger',
+      'compress',
+      'bodyParser',
+      'handleBodyParserError',
+      'compress',
+      'methodOverride',
+      'poweredBy',
+      '$custom',
+      'router',
+      'www',
+      'favicon',
+      '404',
+      '500'
+    ],*/
 
   /****************************************************************************
   *                                                                           *
@@ -75,8 +76,25 @@ module.exports.http = {
   *                                                                          *
   ***************************************************************************/
 
-    // bodyParser: require('skipper')({strict: true})
+    // bodyParser: require('skipper')({strict: true})({limit:'50mb'})
+    
+     // bodyParser: (function () {
+     //    var opts = {limit:'50mb'};
+     //    var fn;
 
+     //    // Default to built-in bodyParser:
+     //    fn = require('skipper');
+     //    return fn(opts);
+
+     //  })
+    //  configuredSkipperBodyParser: function () {
+    //     var opts = {};
+    //     var fn;
+
+    //     // Default to built-in bodyParser:
+    //     fn = require('skipper');
+    //     return fn(opts);
+    // }
   },
 
   /***************************************************************************

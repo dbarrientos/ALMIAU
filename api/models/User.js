@@ -3,11 +3,10 @@ var User = {
   schema: true,
 
   attributes: {
-    name      : { type: 'string' },
-    lastname  : { type: 'string' },
+  	name: "string",
+  	lastname: "string",
     email     : { type: 'email',  unique: true },
-    passports : { collection: 'Passport', via: 'user' },
-    type: { type: 'integer'} //0:USUARIO ,1:ADMIN
+    passports : { collection: 'Passport', via: 'user' }
   }
 };
 

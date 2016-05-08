@@ -31,7 +31,9 @@
    "bcryptjs": "*",
    "passport-twitter": "*",
    "passport-local": "*",
-   "passport-http-bearer": "*"
+   "passport-http-bearer": "*",
+   "compression":"*",
+   "connect-busboy":"*"
   },
   "scripts": {
     "debug": "node debug app.js",

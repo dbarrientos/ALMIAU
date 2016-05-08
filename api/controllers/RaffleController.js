@@ -15,8 +15,9 @@ module.exports = {
 
 
   confirm: function (req, res) {
-    return res.view('index');
-
+    return res.view('parts/confirm',{
+      link: "/raffle/pay/"+req.param("id")
+    });
   },
 
   pay: function (req, res) {
@@ -27,10 +28,18 @@ module.exports = {
     Category.findOne({
       id: req.param('category')
     },function(err,result){
-      return res.view('parts/CreacionRifa',{
-        name: result.name,
-        id: result.id
-      });
+      if(result){
+        Bank.find(function(err,resultbank){
+          return res.view('parts/CreacionRifa',{
+            bancos: resultbank,
+            category: result
+          });
+        });
+      }
+      else
+      {
+        return res.view('parts/home');
+      }
     });
   },
   payto: function (req, res) {
@@ -73,48 +82,96 @@ module.exports = {
 
   },
   newto: function (req, res) {
-    console.log(req.param("prize"));
-    var prize_obj = JSON.parse(req.param("prize"));
-
-    Raffle.create({
-      value: req.param('value'),
-      date_finish: req.param('date_finish'),
-      min_user: req.param('min_user'),
-      max_user: req.param('max_user'),
-      CheckAccount_x_CheckAccount: req.param('CheckAccount_x_CheckAccount')
-    },function(error, result){
-      console.log(prize_obj[0].file);
-      for(i=0;i < prize_obj.length;i++){
-        var file = prize_obj[i].file;
-        Prize.create({
-          raffle_x_raffle: result.id,
-          photo: prize_obj[i].photo,
-          name: prize_obj[i].name,
-          order: prize_obj[i].order
-        },function(error, result){
-          console.log(result)
-
-          Document.create({
-            file: file,
-            prize_x_prize: result.id
-          }, function(error, result){
-            console.log(result);
-          })
-
-        })
-      }
-      console.log(res.locals.user);
-      Role.create({
-
-        user_x_user: res.locals.user.id,
-        raffle_x_raffle: result.id,
-        rol: 2
-      })
-
-    })
-    return res.json({
-      status:1
+    var premios = JSON.parse(req.param('premio'));
+    CheckAccount.create({
+      bank_x_bank : req.param('banco'),
+      type : req.param('tcuenta'),
+      rut : req.param('rut'),
+      titular_name : req.param('titularcuenta'),
+      user_x_user : res.locals.user
+    }, function(err,result){
+        Raffle.create({
+          value: req.param('value'),
+          date_finish: req.param('date'),
+          min_user: req.param('min'),
+          max_user: req.param('max'),
+          CheckAccount_x_CheckAccount: result.id
+        },function(error, result2){
+            var k = 0;
+            for(i=0;i < premios.length;i++){
+              Prize.create({
+                 raffle_x_raffle: result2.id,
+                 photo: premios[i].imagen,
+                 name: premios[i].premio
+              },function(error3, result3){
+                  if(++k >= premios.length){
+                    Role.create({
+                      user_x_user: res.locals.user.id,
+                      raffle_x_raffle: result2.id,
+                      rol: 2
+                    },function(err,result4){
+                       return res.json({
+                          link: '/raffle/confirm/'+result2.id,
+                          status:1
+                       });
+                    });
+                  }
+              });
+            }
+        });
     });
+
+
+    // categoria:categoria,
+    //         name: name,
+    //         lastname: lastname,
+    //         descripcion: descripcion,
+    //         value: value,
+    //         min: min,
+    //         max: max,
+    //         date: date,
+    //         premio: premio,
+    //         ncuenta:ncuenta,
+    //         tcuenta:tcuenta,
+    //         banco: banco,
+    //         titularcuenta: titularcuenta,
+    //         rut:rut
+
+
+    // Raffle.create({
+    //   value: req.param('value'),
+    //   date_finish: req.param('date'),
+    //   min_user: req.param('min'),
+    //   max_user: req.param('max'),
+    //   CheckAccount_x_CheckAccount: req.param('CheckAccount_x_CheckAccount')
+    // },function(error, result){
+    //   console.log(prize_obj[0].file);
+    //   for(i=0;i < prize_obj.length;i++){
+    //     var file = prize_obj[i].file;
+    //     Prize.create({
+    //       raffle_x_raffle: result.id,
+    //       photo: prize_obj[i].photo,
+    //       name: prize_obj[i].name,
+    //       order: prize_obj[i].order
+    //     },function(error, result){
+    //       console.log(result)
+
+    //       Document.create({
+    //         file: file,
+    //         prize_x_prize: result.id
+    //       }, function(error, result){
+    //         console.log(result);
+    //       })
+
+    //     })
+    //   }
+    //   console.log(res.locals.user);
+    //   
+
+    // })
+    // return res.json({
+    //   status:1
+    // });
   },
 
 

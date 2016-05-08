@@ -23,18 +23,6 @@ module.exports.passport = {
     strategy: require('passport-http-bearer').Strategy
   },
 
-  twitter: {
-    name: 'Twitter',
-    protocol: 'oauth',
-    strategy: require('passport-twitter').Strategy,
-    options: {
-      consumerKey: 'your-consumer-key',
-      consumerSecret: 'your-consumer-secret'
-    }
-  },
-
-
-
   facebook: {
     name: 'Facebook',
     protocol: 'oauth2',
@@ -54,8 +42,6 @@ module.exports.passport = {
       clientID: 'your-client-id',
       clientSecret: 'your-client-secret'
     }
-  }
-
-
+  },
 
 };

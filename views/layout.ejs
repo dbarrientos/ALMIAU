@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
+    <title><%=typeof title == 'undefined' ? 'AlMiau - Tu Rifa Online' : title%></title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -19,10 +19,23 @@
           <img src="/images/logo.png" style="width:126px;height:40px;">
          </a>
       </div>
+      <% if(!user){ %>
       <div class="nav navbar-nav navbar-right sign">
          <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#LOGIN">Ingresar</button>
          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#REGISTRO">Registrarse</button>
+         <input type="hidden" id="login" status="0"/>
+
       </div>
+      <% } else { %>
+        <div class="nav navbar-nav navbar-right sign">
+          
+          <form role="form" action="/logout" method="post">
+            <span style="color:#FFF; font-size: 1.2rem;"><%- user.name %> <%- user.lastname %></span>
+             <input style="margin-left: 30px; " type="submit" class="btn btn-primary" value="Salir">
+               <input type="hidden" id="login" status="1"/>
+          </form>
+        </div>
+      <% } %>
     </div>
   </nav>
   <%- body %> 
@@ -37,21 +50,24 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Ingresar</h4>
+          <h4 class="modal-title" id="myModalLabel">Debes estar registrado para hacer tu rifa.</h4>
         </div>
         <div class="modal-body">
+        <form role="form" action="/auth/local" method="post">
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">@</span>
-            <input type="text" class="form-control" placeholder="E-Mail" name="email">
+            <input type="text" class="form-control" placeholder="E-Mail" name="identifier">
           </div>
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">@</span>
             <input type="text" class="form-control" placeholder="Password" name="password">
           </div>
+         
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Ingresar</button>
+          <input type="submit" class="btn btn-primary"></button>
         </div>
+         </form>
       </div>
     </div>
   </div>
@@ -61,9 +77,10 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Regstro</h4>
+          <h4 class="modal-title" id="myModalLabel">Registrate para hacer Tu Miau!</h4>
         </div>
         <div class="modal-body">
+        <form role="form" action="/auth/local/register" method="post">
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">@</span>
             <input type="text" class="form-control" placeholder="Nombre" name="name">
@@ -83,8 +100,9 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Registrarse</button>
+          <input type="submit" class="btn btn-primary" value="Registrarse">
         </div>
+        </form>
       </div>
     </div>
   </div>

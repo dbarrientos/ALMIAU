@@ -13,7 +13,8 @@ module.exports = {
     	type: 'string',
     	unique : true 
 	
-	}
+	},
+	descripcion: 'string'
   }
 };
 
