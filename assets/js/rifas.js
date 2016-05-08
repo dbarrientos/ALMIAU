@@ -3,7 +3,7 @@
       $(".datepicker").datepicker();
       $( "#selectable" ).selectable({
         selected: function( event, ui ) {
-          $(".ui-selected").length
+          $("#totalnumber").html($(".ui-selected").length*$("#valuenumber").html());
         }
       });
   });

@@ -39,6 +39,7 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-4">
 
+
       <ol id="selectable">
       <% for(var i=1; i <= rifa.max_user ; i++) {%>
           <li class="ui-state-default"><%= i %></li>
@@ -50,9 +51,9 @@
   <div class="row">
     <div class="col-xs-8 col-xs-offset-4 col-sm-8 col-sm-offset-4 col-md-7 col-md-offset-5">
       <div class="caption">
-        <h6>Precio por numero: <%= rifa.value %></h6>
+        <h6>Precio por numero: <span id="valuenumber"><%= rifa.value %></span></h6>
         <h6>Numeros comprados:</h6>
-        <h3>Total:</h3>
+        <h3>Total: <span id="totalnumber"></span></h3>
         <button class="btn-primary" style="border-radius: 5px;">
           comprar numero
         </button>
