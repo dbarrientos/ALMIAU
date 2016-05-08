@@ -32,21 +32,24 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'angular/index'
-  },
-  'get /login': 'AuthController.login',
-  'post /logout': 'AuthController.logout',
-  'get /register': 'AuthController.register',
+  '/': { view: 'angular/index'},
+  'GET /login': 'AuthController.login',
+  'POST /logout': 'AuthController.logout',
+  'GET /register': 'AuthController.register',
 
-  'post /auth/local': 'AuthController.callback',
-  'post /auth/local/:action': 'AuthController.callback',
+  'POST /auth/local': 'AuthController.callback',
+  'POST /auth/local/:action': 'AuthController.callback',
 
-  'get /auth/:provider': 'AuthController.provider',
-  'get /auth/:provider/callback': 'AuthController.callback',
-  'get /auth/:provider/:action': 'AuthController.callback',
-  '/perro': 'PerroController.default',
-  '/angular/:ang': 'AngularController.default'
+  'GET /auth/:provider': 'AuthController.provider',
+  'GET /auth/:provider/callback': 'AuthController.callback',
+  'GET /auth/:provider/:action': 'AuthController.callback',
+  'GET /angular/:ang': 'AngularController.default',
+  /* RIFAS */
+  'GET /raffle/new': 'RaffleController.default',
+  'GET /raffle/confirm': 'RaffleController.confirm',
+  'GET /raffle/pay': 'RaffleController.pay',
+  /* 
+
 
   /***************************************************************************
   *                                                                          *

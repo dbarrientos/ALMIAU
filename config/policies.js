@@ -48,8 +48,14 @@ module.exports.policies = {
 		// before letting any users feed our rabbits
 		// feed : ['isNiceToAnimals', 'hasRabbitFood']
 	// }
-  '*': [ 'passport', 'serviceAuth'],
+  '*': [ 'passport'],
   'auth': {
     '*': ['passport']
-  }
+  },
+  'raffle': [ 'passport', 'serviceAuth'],
+  'bank': [ 'passport', 'serviceAuth'],
+  'category': [ 'passport', 'serviceAuth'],
+  'checkaccount': [ 'passport', 'serviceAuth'],
+  'bank': [ 'passport', 'serviceAuth'],
+  'prize': [ 'passport', 'serviceAuth']
 };
