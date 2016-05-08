@@ -53,12 +53,19 @@ module.exports.policies = {
     '*': ['passport']
   },
   'raffle': [ 'passport', 'serviceAuth'],
-  'bank': [ 'passport', 'serviceAuth'],
   'category': [ 'passport', 'serviceAuth'],
   'checkaccount': [ 'passport', 'serviceAuth'],
   'bank': {
     '*': ['passport', 'serviceAuth'],
     'create': ['passport', 'adminAuth'],
+    'destroy': [ 'passport', 'adminAuth']
   },
-  'prize': [ 'passport', 'serviceAuth']
+  'category': {
+    '*': [ 'passport', 'serviceAuth'],
+    'create': [ 'passport', 'adminAuth'],
+    'destroy': [ 'passport', 'adminAuth']
+  },
+  'prize': [ 'passport', 'serviceAuth'],
+  'ticket': [ 'passport', 'serviceAuth'],
+  'winner': [ 'passport', 'serviceAuth'],
 };

@@ -33,6 +33,7 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'angular/index'},
+  /* AUTH */
   'GET /login': 'AuthController.login',
   'POST /logout': 'AuthController.logout',
   'GET /register': 'AuthController.register',
@@ -45,14 +46,35 @@ module.exports.routes = {
   'GET /auth/:provider/:action': 'AuthController.callback',
   'GET /angular/:ang': 'AngularController.default',
   /* RIFAS */
-  'GET /raffle/new': 'RaffleController.default',
-  'GET /raffle/confirm': 'RaffleController.confirm',
-  'GET /raffle/pay': 'RaffleController.pay',
+  '/raffle/new': 'RaffleController.new',
+  '/raffle/new': 'RaffleController.newto',
+  '/raffle/confirm': 'RaffleController.confirm',
+  '/raffle/pay': 'RaffleController.pay',
+  '/raffle': 'RaffleController.index',
+  '/raffle/pay': 'RaffleController.payto',
+
   /* BANK */
-  'GET /bank/get': 'RaffleController.default',
-  'GET /bank/create': 'RaffleController.confirm'
-
-
+  '/bank/create': 'BankController.create',
+  '/bank/destroy': 'BankController.destroy',
+  /* CATEGORY */
+  '/bank/create': 'BankController.create',
+  '/bank/destroy': 'BankController.destroy',
+  /* PRIZE */
+  '/prize': 'PrizeController.index',
+  '/prize/create': 'PrizeController.create',
+  '/prize/destroy': 'PrizeController.destroy',
+  /* CHECK ACCOUNT */
+  '/checkaccount': 'CheckAccountController.index',
+  '/checkaccount/create': 'CheckAccountController.create',
+  '/checkaccount/destroy': 'CheckAccountController.destroy',
+  /* TICKET */
+  '/ticket': 'TicketController.index',
+  '/ticket/create': 'TicketController.create',
+  '/ticket/destroy': 'TicketController.destroy',
+  /* WINNER */
+  '/winner': 'WinnerController.index',
+  '/winner/create': 'WinnerController.create',
+  '/winner/destroy': 'WinnerController.destroy',
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

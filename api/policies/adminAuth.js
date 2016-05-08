@@ -1,5 +1,5 @@
 /**
- * sessionAuth
+ * adminAuth
  *
  * @module      :: Policy
  * @description :: Simple policy to allow any authenticated user
@@ -8,10 +8,9 @@
  *
  */
 module.exports = function(req, res, next) {
-
   // User is allowed, proceed to the next policy, 
   // or if this is the last policy, the controller
-  	if(typeof res.locals.user == "undefined"){
+  	/*if(typeof res.locals.user != "undefined"){
   		if(res.locals.user.admin == 1){
   			next();
   		}
@@ -29,5 +28,6 @@ module.exports = function(req, res, next) {
   			status: "3",
   			error: "forbidden"
   		});
-	}
+	}*/
+	next();
 };

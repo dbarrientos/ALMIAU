@@ -9,7 +9,7 @@ module.exports = {
 
   attributes: {
 
-    bank_x_bank : { type: 'string' },
+    bank_x_bank : { model: 'bank' },
 
     type : { type: 'string' },
 
@@ -17,7 +17,7 @@ module.exports = {
 
     titular_name : { type: 'string' },
 
-    user_x_user : { type: 'string' }
+    user_x_user : { model: 'user' }
   }
 };
 

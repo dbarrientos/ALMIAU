@@ -12,16 +12,10 @@ module.exports = {
   /**
    * `PrizeController.default()`
    */
-  default: function (req, res) {
-    return res.view('index');
-  },
-
-
-  /**
-   * `PrizeController.create()`
-   */
-  create: function (req, res) {
-    return res.view('index');
+  index: function (req, res) {
+    return res.json({
+      status:1
+    });
   },
 
 
@@ -29,14 +23,6 @@ module.exports = {
    * `PrizeController.update()`
    */
   update: function (req, res) {
-    return res.view('index');
-  },
-
-
-  /**
-   * `PrizeController.destroy()`
-   */
-  destroy: function (req, res) {
     return res.view('index');
   }
 };

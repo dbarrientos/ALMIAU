@@ -9,11 +9,11 @@ module.exports = {
 
   attributes: {
 
-    user_x_user : { type: 'string' },
+    user_x_user : { model: 'user' },
 
-    rifa_x_rifa : { type: 'string' },
+    rifa_x_rifa : { model: 'raffle' },
 
-    rol : { type: 'string' }
+    rol : { type: 'integer' }
   }
 };
 
