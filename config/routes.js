@@ -57,8 +57,8 @@ module.exports.routes = {
   '/bank/create': 'BankController.create',
   '/bank/destroy': 'BankController.destroy',
   /* CATEGORY */
-  '/bank/create': 'BankController.create',
-  '/bank/destroy': 'BankController.destroy',
+  '/category/create': 'CategoryController.create',
+  '/category/destroy': 'CategoryController.destroy',
   /* PRIZE */
   '/prize': 'PrizeController.index',
   '/prize/create': 'PrizeController.create',

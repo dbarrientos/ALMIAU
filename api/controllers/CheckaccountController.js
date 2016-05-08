@@ -7,7 +7,11 @@
 
 module.exports = {
 	index: function(req,res){
-
+		CheckAccount.find({
+			user_x_user: req.param('id')
+		}).exec(function afterwards(err, populatedRecords){
+			res.json(populatedRecords);
+		});
 	}
 };
 
