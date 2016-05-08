@@ -50,7 +50,7 @@ module.exports.routes = {
   'POST /raffle/new': 'RaffleController.newto',
   'GET /raffle/confirm': 'RaffleController.confirm',
   'GET /raffle/pay': 'RaffleController.pay',
-  'GET /raffle': 'RaffleController.defaut',
+  'GET /raffle': 'RaffleController.default',
   'POST /raffle/pay': 'RaffleController.payto',
 
   /* BANK */
