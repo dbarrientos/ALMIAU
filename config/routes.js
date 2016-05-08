@@ -46,35 +46,35 @@ module.exports.routes = {
   'GET /auth/:provider/:action': 'AuthController.callback',
   'GET /angular/:ang': 'AngularController.default',
   /* RIFAS */
-  'GET /raffle/new': 'RaffleController.new',
-  'POST /raffle/new': 'RaffleController.newto',
-  'GET /raffle/confirm': 'RaffleController.confirm',
-  'GET /raffle/pay': 'RaffleController.pay',
-  'GET /raffle': 'RaffleController.default',
-  'POST /raffle/pay': 'RaffleController.payto',
+  '/raffle/new': 'RaffleController.new',
+  '/raffle/new': 'RaffleController.newto',
+  '/raffle/confirm': 'RaffleController.confirm',
+  '/raffle/pay': 'RaffleController.pay',
+  '/raffle': 'RaffleController.index',
+  '/raffle/pay': 'RaffleController.payto',
 
   /* BANK */
-  'GET /bank/get': 'BankController.default',
-  'POST /bank/create': 'BankController.create',
-  'DELETE /bank/create': 'BankController.destroy',
+  '/bank/create': 'BankController.create',
+  '/bank/destroy': 'BankController.destroy',
   /* CATEGORY */
-  'GET /category/get': 'CategoryController.default',
+  '/bank/create': 'BankController.create',
+  '/bank/destroy': 'BankController.destroy',
   /* PRIZE */
-  'GET /prize/get': 'CategoryController.default',
-  'POST /prize/create': 'CategoryController.create',
-  'DELETE /prize/destroy': 'CategoryController.destroy',
+  '/prize': 'PrizeController.index',
+  '/prize/create': 'PrizeController.create',
+  '/prize/destroy': 'PrizeController.destroy',
   /* CHECK ACCOUNT */
-  'GET /checkaccount': 'CheckAccountController.default',
-  'POST /checkaccount/create': 'CheckAccountController.create',
-  'DELETE /checkaccount/destroy': 'CheckAccountController.destroy',
+  '/checkaccount': 'CheckAccountController.index',
+  '/checkaccount/create': 'CheckAccountController.create',
+  '/checkaccount/destroy': 'CheckAccountController.destroy',
   /* TICKET */
-  'GET /ticket': 'TicketController.getFromRaffle',
-  'POST /ticket/create': 'TicketController.create',
-  'DELETE /ticket/destroy': 'TicketController.destroy',
+  '/ticket': 'TicketController.index',
+  '/ticket/create': 'TicketController.create',
+  '/ticket/destroy': 'TicketController.destroy',
   /* WINNER */
-  'GET /ticket': 'WinnerController.default',
-  'POST /ticket/create': 'WinnerController.create',
-  'DELETE /ticket/destroy': 'WinnerController.destroy',
+  '/winner': 'WinnerController.index',
+  '/winner/create': 'WinnerController.create',
+  '/winner/destroy': 'WinnerController.destroy',
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

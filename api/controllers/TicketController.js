@@ -19,8 +19,12 @@ module.exports = {
   /**
    * `TicketController.getFromRaffle()`
    */
-  getFromRaffle: function (req, res) {
-    return res.view('index');
+  index: function (req, res) {
+    Ticket.find({
+      id:req.param('id')
+    }).exec(function(result){
+
+    });
   }
 };
 
