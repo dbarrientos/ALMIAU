@@ -66,4 +66,6 @@ module.exports.policies = {
     'destroy': [ 'passport', 'adminAuth']
   },
   'prize': [ 'passport', 'serviceAuth'],
+  'ticket': [ 'passport', 'serviceAuth'],
+  'winner': [ 'passport', 'serviceAuth'],
 };

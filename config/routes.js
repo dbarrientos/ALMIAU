@@ -67,6 +67,14 @@ module.exports.routes = {
   'GET /checkaccount': 'CheckAccountController.default',
   'POST /checkaccount/create': 'CheckAccountController.create',
   'DELETE /checkaccount/destroy': 'CheckAccountController.destroy',
+  /* TICKET */
+  'GET /ticket': 'TicketController.getFromRaffle',
+  'POST /ticket/create': 'TicketController.create',
+  'DELETE /ticket/destroy': 'TicketController.destroy',
+  /* WINNER */
+  'GET /ticket': 'WinnerController.default',
+  'POST /ticket/create': 'WinnerController.create',
+  'DELETE /ticket/destroy': 'WinnerController.destroy',
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

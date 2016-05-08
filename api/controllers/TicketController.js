@@ -16,23 +16,6 @@ module.exports = {
     return res.view('index');
   },
 
-
-  /**
-   * `TicketController.create()`
-   */
-  create: function (req, res) {
-    return res.view('index');
-  },
-
-
-  /**
-   * `TicketController.destroy()`
-   */
-  destroy: function (req, res) {
-    return res.view('index');
-  },
-
-
   /**
    * `TicketController.getFromRaffle()`
    */

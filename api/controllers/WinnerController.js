@@ -14,22 +14,7 @@ module.exports = {
    */
   default: function (req, res) {
     return res.view('index');
-  },
-
-
-  /**
-   * `WinnerController.create()`
-   */
-  create: function (req, res) {
-    return res.view('index');
-  },
-
-
-  /**
-   * `WinnerController.destroy()`
-   */
-  destroy: function (req, res) {
-    return res.view('index');
   }
+  
 };
 
