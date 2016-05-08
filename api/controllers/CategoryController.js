@@ -13,15 +13,14 @@ module.exports = {
    * `CategoryController.default()`
    */
   default: function (req, res) {
-    return res.view('index');
-  },
+    Category.find({
+      where: {
+      id:req.param('id')
+      }
+    }).exec(function(result){
+      console.log("hurra!!")
+    });
+  }
 
-
-  /**
-   * `CategoryController.update()`
-   */
-  update: function (req, res) {
-    return res.view('index');
-  },
 };
 

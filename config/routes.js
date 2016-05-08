@@ -56,13 +56,15 @@ module.exports.routes = {
   /* BANK */
   'GET /bank/get': 'BankController.default',
   'POST /bank/create': 'BankController.create',
-  'DELETE /bank/create': 'BankController.destroy',
+  'DELETE /bank/destroy': 'BankController.destroy',
   /* CATEGORY */
   'GET /category/get': 'CategoryController.default',
+  'POST /category/create': 'CategoryController.create',
+  'DELETE /category/destroy': 'CategoryController.destroy',
   /* PRIZE */
-  'GET /prize/get': 'CategoryController.default',
-  'POST /prize/create': 'CategoryController.create',
-  'DELETE /prize/destroy': 'CategoryController.destroy',
+  'GET /prize/get': 'PrizeController.default',
+  'POST /prize/create': 'PrizeController.create',
+  'DELETE /prize/destroy': 'PrizeController.destroy',
   /* CHECK ACCOUNT */
   'GET /checkaccount': 'CheckAccountController.default',
   'POST /checkaccount/create': 'CheckAccountController.create',
@@ -72,9 +74,9 @@ module.exports.routes = {
   'POST /ticket/create': 'TicketController.create',
   'DELETE /ticket/destroy': 'TicketController.destroy',
   /* WINNER */
-  'GET /ticket': 'WinnerController.default',
-  'POST /ticket/create': 'WinnerController.create',
-  'DELETE /ticket/destroy': 'WinnerController.destroy',
+  'GET /winner': 'WinnerController.default',
+  'POST /winner/create': 'WinnerController.create',
+  'DELETE /winner/destroy': 'WinnerController.destroy',
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
