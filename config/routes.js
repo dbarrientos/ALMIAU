@@ -54,6 +54,7 @@ module.exports.routes = {
   '/raffle/pay': 'RaffleController.payto',
 
   /* BANK */
+
   '/bank/create': 'BankController.create',
   '/bank/destroy': 'BankController.destroy',
   /* CATEGORY */
@@ -63,6 +64,7 @@ module.exports.routes = {
   '/prize': 'PrizeController.index',
   '/prize/create': 'PrizeController.create',
   '/prize/destroy': 'PrizeController.destroy',
+
   /* CHECK ACCOUNT */
   '/checkaccount': 'CheckAccountController.index',
   '/checkaccount/create': 'CheckAccountController.create',
@@ -72,9 +74,11 @@ module.exports.routes = {
   '/ticket/create': 'TicketController.create',
   '/ticket/destroy': 'TicketController.destroy',
   /* WINNER */
+
   '/winner': 'WinnerController.index',
   '/winner/create': 'WinnerController.create',
   '/winner/destroy': 'WinnerController.destroy',
+
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

@@ -13,8 +13,10 @@ module.exports = {
    * `PrizeController.default()`
    */
   index: function (req, res) {
-    return res.json({
-      status:1
+    Prize.find().populate("raffle_x_raffle", {
+      where:{
+        x_raffle: req.param('id')
+      }
     });
   },
 

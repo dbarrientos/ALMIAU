@@ -11,8 +11,6 @@ module.exports = {
 
     category_x_category : { model: 'category' },
 
-    prize_x_prize : { model: 'prize' },
-
     value : { type: 'string' },
 
     date_finish : { type: 'datetime' },
