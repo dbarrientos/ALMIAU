@@ -9,8 +9,24 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
        
        // HOME STATES AND NESTED VIEWS ========================================
        .state('home', {
-           url: '/home',
-           templateUrl: 'angular/home.ejs'
+			url: '/home',
+			templateUrl: 'angular/home.ejs',
+			controller: 'HomeCtrl'
+
        })
+       .state('creacionRifa', {
+			url: '/CreacionRifa',
+			templateUrl: 'angular/CreacionRifa.ejs',
+      controller: 'CreacionRifaCtrl'
+       })       
+
 
 });
+
+
+routerApp.controller('HomeCtrl', ['$scope', function($scope) {
+  $scope.greeting = 'Hola!';
+}]);
+routerApp.controller('CreacionRifaCtrl', ['$scope', function($scope) {
+  $scope.greeting = 'Hola!';
+}]);
