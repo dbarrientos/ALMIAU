@@ -6,7 +6,8 @@ var User = {
     name      : { type: 'string' },
     lastname  : { type: 'string' },
     email     : { type: 'email',  unique: true },
-    passports : { collection: 'Passport', via: 'user' }
+    passports : { collection: 'Passport', via: 'user' },
+    type: { type: 'integer'} //0:USUARIO ,1:ADMIN
   }
 };
 

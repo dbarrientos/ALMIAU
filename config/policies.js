@@ -56,6 +56,9 @@ module.exports.policies = {
   'bank': [ 'passport', 'serviceAuth'],
   'category': [ 'passport', 'serviceAuth'],
   'checkaccount': [ 'passport', 'serviceAuth'],
-  'bank': [ 'passport', 'serviceAuth'],
+  'bank': {
+    '*': ['passport', 'serviceAuth'],
+    'create': ['passport', 'adminAuth'],
+  },
   'prize': [ 'passport', 'serviceAuth']
 };
