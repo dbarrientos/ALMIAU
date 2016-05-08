@@ -1,0 +1,80 @@
+<div class="container" id="rifa">
+  <div class="row category">
+    <%= name %>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cabecera">
+        El pasaje estándar Lorem Ipsum, usado desde el año 1500.
+
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    </div>
+  </div>
+  <div class="row acordeon-item">
+    <div class="header active">Nombre del beneficiario</div>
+    <div class="body" style="display:block;">
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"></span>
+            <input type="text" class="form-control" placeholder="Nombre Beneficiario" name="name">
+            <input type="hidden" value="<%= id %>" name="category">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"></span>
+            <input type="text" class="form-control" placeholder="Apellidos" name="lastname">
+        </div>
+    </div>
+  </div>
+  <div class="row acordeon-item">
+    <div class="header">Reglas del juego</div>
+    <div class="body">
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"></span>
+            <input type="text" class="form-control" placeholder="Valor del numero" name="value">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"></span>
+            <input type="text" class="form-control" placeholder="Cantidad minima de numeros vendidos" name="min">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"></span>
+            <input type="text" class="form-control" placeholder="Cantidad maxima de numeros vendidos" name="max">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"></span>
+            <input type="text" class="form-control datepicker" placeholder="Fecha limite" name="date">
+        </div>
+    </div>
+  </div>
+  <div class="row acordeon-prize" data-toggle="modal" data-target="#PRIZE">
+    <div class="header">Premios</div>
+  </div>
+  <div class="row acordeon-item">
+    <div class="header">Medios de cobro</div>
+    <div class="body">
+      El pasaje estándar Lorem Ipsum, usado desde el año 1500.
+
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    </div>
+  </div>
+</div>
+<!-- MODALES -->
+  <!-- Modal -->
+  <div class="modal fade" id="PRIZE" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Premios</h4>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+              
+          </div>
+        </div>
+        <div class="modal-footer">
+          <label for="fileinput" class="plus"><i class="fa fa-plus" aria-hidden="true"></i><input id="inputFileToLoad" type="file" /></label>
+          
+        </div>
+      </div>
+    </div>
+  </div>

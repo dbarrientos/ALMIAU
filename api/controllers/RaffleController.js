@@ -24,12 +24,17 @@ module.exports = {
 
   },
   new: function (req, res) {
-    return res.view('index');
-
+    Category.findOne({
+      id: req.param('category')
+    },function(err,result){
+      return res.view('parts/CreacionRifa',{
+        name: result.name,
+        id: result.id
+      });
+    });
   },
   payto: function (req, res) {
     var ticket = JSON.parse(req.param('ticket'));
-    console.log(res.locals.user);
     Role.findOne({
       user_x_user: res.locals.user.id,
       raffle_x_raffle: req.param('id')
@@ -40,7 +45,6 @@ module.exports = {
           raffle_x_raffle: req.param('id'),
           rol: 3
         },function(err,result){
-          console.log(result)
           for(i=0;i<ticket.length;i++){
             Ticket.insert({
               role_x_role: result.id,
