@@ -55,7 +55,7 @@ module.exports.routes = {
 
   /* BANK */
   'GET /bank/get': 'BankController.default',
-  'POST /bank/create': 'BankController.create'
+  'POST /bank/create': 'BankController.create',
   'DELETE /bank/create': 'BankController.destroy'
   /* CATEGORY */
   'GET /category/get': 'CategoryController.default',
